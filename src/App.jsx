@@ -1,14 +1,19 @@
 import React from "react";
+import TaskForm from "./components/TaskForm";
+import TaskColumn from "./components/TaskColumn";
+import Todo from "./assets/direct-hit.png";
+import Doing from "./assets/glowing-star.png";
+import Done from "./assets/check-mark-button.png";
 import "./App.css";
 
 function App() {
   return (
     <div className="app">
-      <header className="app_header">Header Section</header>
+      <TaskForm />
       <main className="app_main">
-        <section className="task_column">Section1 </section>
-        <section className="task_column">Section2 </section>
-        <section className="task_column">Section3 </section>
+        <TaskColumn icon={Todo} title="Todo" />
+        <TaskColumn icon={Doing} title="Doing" />
+        <TaskColumn icon={Done} title="Done" />
       </main>
     </div>
   );
